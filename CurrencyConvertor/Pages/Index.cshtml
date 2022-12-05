@@ -6,5 +6,26 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Made By Benjamin Thompson.</p>
+    
+    
+    <form method="post" class="mx-auto" style="width: 90%">
+        <p>
+            <select name="Currency" asp-for="Currency">
+                <option value="">Select a Currency</option>
+                <option value="EUR">Euro</option>
+                <option value="USD">United States Dollar</option>
+                <option value="AUD">Australian Dollar</option>
+            </select>
+        </p>
+        <p>
+            <label>Amount: </label>
+            <input type="number" step="any" asp-for="Amount">
+        </p>
+        <input type="submit" value="Submit"/>
+    </form>
+    <p class="mb-3">
+        @ViewData["Response"]
+    </p>
+    
 </div>

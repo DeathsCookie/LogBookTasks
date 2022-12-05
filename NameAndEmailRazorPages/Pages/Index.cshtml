@@ -4,7 +4,22 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
+<div class="text-center"  style="background-color:peachpuff">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Made By Benjamin Thompson.</p>
+    
+    <form method="post" class="mx-auto" style="width: 90%">
+        <p class="mb-3">
+            <label class="form-label">Name</label>
+                <input type="string" asp-for="Name">
+        </p>
+        <p class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" asp-for="Email"/>
+        </p>
+        <input type="submit" value="Submit" />
+    </form>
+    <p class="mb-3">
+        @ViewData["Response"]
+    </p>
 </div>
