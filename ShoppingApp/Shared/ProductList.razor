@@ -1,0 +1,9 @@
+﻿@using ShoppingApp.Models
+@using ShoppingApp.Services
+
+<h2>List of all Available Products</h2>
+
+@foreach (Product product in ProductService.Products)
+{
+    <ProductView product="product"></ProductView>
+}

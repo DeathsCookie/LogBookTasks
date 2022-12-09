@@ -1,0 +1,46 @@
+﻿@using ShoppingApp.Services
+@using ShoppingApp.Models
+@using Microsoft.AspNetCore.Http.Extensions
+
+<tr>
+    <td>@Item.Key.Name</td>
+    <td>@Item.Value</td>
+    <td>@Item.Key.Cost</td>
+    <td>@Calc(@Item.Key.Cost, @Item.Value)</td>
+    <td>
+        <button class="btn btn-success text-center" title="Increase" style="background-color: green;" @onclick="@IncreaseQuantity">+</button>
+        <button class="btn btn-warning text-center" title="Decrease" style="background-color: orange;" @onclick="DecreaseQuantity">-</button>
+        <button class="btn btn-danger text-center" title="Remove" style="background-color: red;" @onclick="RemoveItem">X</button>
+    </td>
+</tr>
+
+
+@code {
+    
+    [Parameter]
+    public KeyValuePair<Product, int> Item { get; set; }
+    
+    private void IncreaseQuantity()
+    {
+        CartService.IncreaseQuantity(Item.Key);
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void DecreaseQuantity()
+    {
+        CartService.DecreaseQuantity(Item.Key);
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void RemoveItem()
+    {
+        CartService.RemoveItem(Item.Key);
+        InvokeAsync(StateHasChanged);
+    }
+    
+    private double Calc(double cost, int quantity)
+    {
+        return cost * quantity;
+    }
+}

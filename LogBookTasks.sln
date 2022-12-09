@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie", "MvcMovie\MvcMov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "ContosoUniversity\ContosoUniversity.csproj", "{16FFDDCB-B507-48C1-9CAC-A41F6DB46E1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCUniversity", "MVCUniversity\MVCUniversity.csproj", "{AB7D00C9-8F13-496A-B32B-FCD8EA712D03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingApp", "ShoppingApp\ShoppingApp.csproj", "{1C0A4666-4F8B-439F-8D40-0D6C4592C578}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{16FFDDCB-B507-48C1-9CAC-A41F6DB46E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16FFDDCB-B507-48C1-9CAC-A41F6DB46E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16FFDDCB-B507-48C1-9CAC-A41F6DB46E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7D00C9-8F13-496A-B32B-FCD8EA712D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7D00C9-8F13-496A-B32B-FCD8EA712D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7D00C9-8F13-496A-B32B-FCD8EA712D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7D00C9-8F13-496A-B32B-FCD8EA712D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0A4666-4F8B-439F-8D40-0D6C4592C578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0A4666-4F8B-439F-8D40-0D6C4592C578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0A4666-4F8B-439F-8D40-0D6C4592C578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0A4666-4F8B-439F-8D40-0D6C4592C578}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

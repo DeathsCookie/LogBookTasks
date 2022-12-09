@@ -56,7 +56,7 @@ namespace ContosoUniversity.Data
                 new Enrollment{StudentID=6,CourseID=1045},
                 new Enrollment{StudentID=7,CourseID=3141,Grade=Grade.A},
             };
-
+            
             context.Enrollments.AddRange(enrollments);
             context.SaveChanges();
         }

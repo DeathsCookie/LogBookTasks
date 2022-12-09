@@ -1,0 +1,31 @@
+﻿@page "/Cart"
+@using ShoppingApp.Models
+@using ShoppingApp.Services
+
+<h3>Cart</h3>
+
+
+<div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Indiviual Price</th>
+            <th class="text-center"> Amount Cost</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in CartService.Selections)
+            {
+                <CartItem Item="result"></CartItem>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code{
+
+    
+}

@@ -1,0 +1,18 @@
+﻿@using ShoppingApp.Models
+@using ShoppingApp.Services
+
+
+<div>
+    <div class="card-body">
+        <h5 class="card-title">@product.Name</h5>
+        <blockquote class="card-text"><strong>£@product.Cost</strong></blockquote>
+        <button class="btn btn-primary" type="button" @onclick="()=> CartService.IncreaseQuantity(product)">Buy</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Product product { get; set; }
+    
+    
+}
