@@ -12,6 +12,7 @@ public class CartService
             return;
         
         Selections.Add(product, 1);
+        ProductService.ReduceStock(product.Id);
     }
 
     public static void IncreaseQuantity(Product product)
@@ -46,5 +47,16 @@ public class CartService
         if (!Selections.ContainsKey(product)) return;
 
         Selections.Remove(product);
+    }
+
+    public static double CalcTotal()
+    {
+        double cost = 0;
+        foreach (var pair in Selections)
+        {
+            cost += pair.Key.Cost * pair.Value;
+        }
+
+        return cost;
     }
 }

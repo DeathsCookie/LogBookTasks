@@ -6,6 +6,7 @@
     <div class="card-body">
         <h5 class="card-title">@product.Name</h5>
         <blockquote class="card-text"><strong>£@product.Cost</strong></blockquote>
+        <blockquote class="card-text"><strong>Stock: @product.Stock</strong></blockquote>
         <button class="btn btn-primary" type="button" @onclick="()=> CartService.IncreaseQuantity(product)">Buy</button>
     </div>
 </div>

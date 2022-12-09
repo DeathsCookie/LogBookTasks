@@ -2,8 +2,9 @@
 @using ShoppingApp.Models
 @using ShoppingApp.Services
 
-<h3>Cart</h3>
+<h3>Shopping Cart</h3>
 
+<h4>You have @CartService.Selections.Count() Items Selected!</h4>
 
 <div>
     <table class="table table-bordered">
@@ -25,7 +26,8 @@
     </table>
 </div>
 
-@code{
+<h4>Your Total Cost is £@Total</h4>
 
-    
+@code{
+    private double Total = CartService.CalcTotal();
 }
